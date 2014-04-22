@@ -1,0 +1,21 @@
+[database]
+  db_host = "localhost"
+  db_user = "root"
+  db_password = ""
+  db_name = "db_dev"
+  db_socket = '/tmp/mysql.sock'
+
+[facebook]
+  app_id = "123456789087654"
+  app_secret= "4ebafasergth2345Tsdfb050f4feb"
+  permissions = ""
+  page_name = "sample_page"
+  page_id = "123456789"
+  redirect_uri = "http://sample.com"
+
+[basic-auth]
+  auth_user = "sample_user"
+  auth_password = "12345"
+
+[App]
+  csrf = "some_random_keys"

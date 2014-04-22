@@ -1,0 +1,55 @@
+Very Light MVC
+==============
+
+Very Light MVC is an attempt to build a basic MVC structure in PHP. It should help build small website while keeping logical parts separated one from each other.
+
+I'm clearly not an expert in PHP and this was build for a one time project. I tried to write code as strong and secure as I could, but use it at your own risks. I won't be responsible for your production site.
+
+## Basic Structure
+
+### /app
+
+This folder will contains your application. Almost everything you'll write will go there. The 3 different parts of the MVC structure is represented here : Controllers, Models and Views.
+
+#### /app/controllers
+
+That's where your controllers will be. You should name your files from the ressource it's supposed to serve. For a controller managing the User model, you should have the file named `users_controller.php`, containing something like :
+
+    <?php
+      require_once CWD . '/lib/controller.php';
+    
+      class UsersController extends Controller {
+      }
+    ?>
+
+#### /app/models
+
+This is the prefered place for all your business logic. Every classes that is database related should be here.
+Here again, naming convention advise you to have classes named like `user.php` having something like :
+
+    <?php
+      require_once CWD . '/lib/model.php';
+    
+      class User extends BaseModel {
+      }
+    ?>
+
+#### /app/helpers
+
+You can place here any file you may need. Keep in mind that there is no autoload for any file in here, except for the default `application_helper.php`, so you may need to include them in the `setup.php` file or elsewhere.
+
+#### /app/views
+
+Here goes the vews for each actions of each controllers. The naming convention is : `views/controller_name/action_name.php`. For example, for the edit action of the users controller, we expect to have a file like : `views/users/edit.php`
+
+### /config
+
+It contains the configuration files. You'll find an exemple file as `development.ini.example` that you can rename into `development.ini` or `production.ini` depending on your environement setup.
+
+### /lib
+
+It contains all the Very Light MVC files. It's composed of a request, a routeur, and the MVC files.
+
+### /public
+
+There goes your static public files (CSS, Javascript, images...)

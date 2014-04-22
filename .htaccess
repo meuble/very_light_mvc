@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^([a-zA-Z]*)/?$ index.php?controller=$1 [NC,L,QSA]
+RewriteRule ^([a-zA-Z]*)/([0-9]*)/?$ index.php?controller=$1&id=$2 [NC,L,QSA]
+RewriteRule ^([a-zA-Z]*)/([a-zA-Z]*)/?$ index.php?controller=$1&action=$2 [NC,L,QSA]
+RewriteRule ^([a-zA-Z]*)/([0-9]*)/([a-zA-Z]*)/?$ index.php?controller=$1&action=$3&id=$2 [NC,L,QSA]

@@ -1,0 +1,23 @@
+# OSX files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
+
+# Project files
+*.log
+config/development.ini
